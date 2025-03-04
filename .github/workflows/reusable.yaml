@@ -10,3 +10,9 @@ on:
     # secrets:
     #   personal_access_token:
     #     required: true
+    jobs:
+      reusable-job:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Greet someone
+            run: echo "Hello ${{ inputs.who-to-greet}}"
