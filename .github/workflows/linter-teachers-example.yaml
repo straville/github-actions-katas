@@ -58,5 +58,10 @@ jobs:
     # permissions:
     #   packages: write
     steps:
-    - name: Execute component test
-      run: bash ci/component-test.sh
+      - name: Download code
+        uses: actions/download-artifact@v4
+        with:
+          name: code
+          path: .
+      - name: Execute component test
+        run: bash ci/component-test.sh
