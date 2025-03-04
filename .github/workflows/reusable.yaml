@@ -1,0 +1,12 @@
+name: Reusable workflow
+on:
+  workflow_call:
+    inputs:
+      who-to-greet:
+        required: true
+        type: string
+        description: 'This person is great'
+        default: 'World'
+    # secrets:
+    #   personal_access_token:
+    #     required: true
