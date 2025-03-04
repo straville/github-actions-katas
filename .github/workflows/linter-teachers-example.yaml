@@ -38,3 +38,9 @@ jobs:
     needs: [Build]
     permissions:
       packages: write
+    steps:
+      - name: Download code
+        uses: actions/download-artifact@v4
+        with:
+          name: code
+          path: .
